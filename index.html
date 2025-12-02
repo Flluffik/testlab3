@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интернет-магазин "У Флафика"</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">Магазин "На диване у флафика"</h1>
+            <nav class="nav">
+                <button class="cart-button" id="cartButton">
+                    Корзина (<span id="cartCount">0</span>)
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="products-section">
+            <div class="container">
+                <h2>Каталог товаров</h2>
+                <div class="products-grid" id="productsGrid">
+                </div>
+            </div>
+        </section>
+
+        <aside class="cart-sidebar" id="cartSidebar">
+            <div class="cart-header">
+                <h3>Корзина</h3>
+                <button class="close-cart" id="closeCart">&times;</button>
+            </div>
+            <div class="cart-items" id="cartItems">
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    Итого: <span id="cartTotal">0</span> руб.
+                </div>
+                <button class="checkout-button" id="checkoutButton">
+                    Оформить заказ
+                </button>
+            </div>
+        </aside>
+    </main>
+
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Оформление заказа</h3>
+                <button class="close-modal" id="closeModal">&times;</button>
+            </div>
+            <form class="order-form" id="orderForm">
+                <div class="form-group">
+                    <label for="firstName">Имя:</label>
+                    <input type="text" id="firstName" name="firstName" required>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Фамилия:</label>
+                    <input type="text" id="lastName" name="lastName" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Адрес доставки:</label>
+                    <textarea id="address" name="address" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Контактный номер телефона:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <button type="submit" class="submit-order">Создать заказ</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
